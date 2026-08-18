@@ -42,6 +42,29 @@ what already happened to someone.
 
 ---
 
+## What's in this repo
+
+**This is an agent design and prompt reference, not a deployable solution.**
+
+| Included | Not included |
+|---|---|
+| Two agent behaviours as `SKILL.md` files | A packaged solution or deployed agent |
+| Vision and control-matching prompts (`prompts/hazardVision.js`) | Dataverse tables — schema is documented only |
+| Dataverse schema documentation | A mobile app or PCF controls |
+| Safety-specific design principles | A procedure/SWMS library |
+
+The behaviours and prompts are complete and usable. Everything else is documentation.
+
+**Verification status:** the capture patterns and photo-handling rules are generalised from a
+production safety implementation. The **vision-based hazard identification and SWMS matching in this
+repo have not been run** — the prompts encode the right constraints, but no accuracy testing against
+a hazard taxonomy or procedure library has been done here.
+
+> **This is safety tooling.** Validate against your own obligations, taxonomy and procedures before
+> relying on any of it. The failure mode of a wrong answer is not an inconvenience.
+
+---
+
 ## How it works
 
 ```
