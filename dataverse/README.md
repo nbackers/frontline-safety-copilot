@@ -30,7 +30,7 @@ Something that happened or was found.
 
 **The two-column separation is the important part of this schema.** `fsc_description` holds what the
 person said. `fsc_photoanalysis` holds what the model saw. They are never merged, so anyone reading
-the record can tell which is which — and in an investigation that distinction is everything.
+the record can tell which is which - and in an investigation that distinction is everything.
 
 Derived fields are set by rules, not the agent. A regulator-notifiable determination must be
 traceable to a rule rather than a model's judgement on the day.
@@ -60,9 +60,9 @@ Hazards found by an assessment or event. Many per parent.
 
 | Column | Purpose |
 |---|---|
-| `fsc_description` | Specific — "unguarded floor opening near the east stair" |
+| `fsc_description` | Specific - "unguarded floor opening near the east stair" |
 | `fsc_hazardtype` | Lookup to `fsc_hazardtype` |
-| `fsc_confidence` | 0–1, as reported by the model |
+| `fsc_confidence` | 0-1, as reported by the model |
 | `fsc_severity` | Low, Medium, High |
 | `fsc_source` | Described, Photo, Site history |
 | `fsc_matchedprocedure` | Lookup, **empty when unmatched** |
@@ -87,7 +87,7 @@ Safe work method statements and control procedures.
 | `fsc_document` | The full document |
 | `fsc_isactive` | |
 
-Matching is on **hazard type and task**. Both matter — working at height in a warehouse and working
+Matching is on **hazard type and task**. Both matter - working at height in a warehouse and working
 at height on a roof are different procedures.
 
 ### `fsc_hazardtype`
@@ -100,7 +100,7 @@ Your hazard taxonomy. Reference data.
 | `fsc_ishighconsequence` | Drives the permit/isolation branch |
 | `fsc_defaultseverity` | |
 
-Use your organisation's existing taxonomy. The prompts accept the list and classify against it — a
+Use your organisation's existing taxonomy. The prompts accept the list and classify against it - a
 taxonomy the organisation already reports on is worth more than a generic one.
 
 ### `fsc_site`
@@ -127,10 +127,9 @@ one is not reported at all.
 ## Site history
 
 Previous events at a site, and previous events on a task type, are the strongest signal for hazard
-identification — a hazard that has already caused an incident here is not theoretical.
+identification - a hazard that has already caused an incident here is not theoretical.
 
 Index for that query pattern:
-
 - `fsc_safetyevent` by `fsc_site` and `fsc_occurredon`
 - `fsc_jobsafetyassessment` by `fsc_task`
 - `fsc_identifiedhazard` by `fsc_hazardtype`
@@ -139,21 +138,20 @@ Index for that query pattern:
 
 ## Reporting worth building
 
-**Unmatched hazards** — hazards with no matching procedure. A direct gap list for the safety team.
+**Unmatched hazards** - hazards with no matching procedure. A direct gap list for the safety team.
 
-**Assessment-to-incident correlation** — incidents at sites and tasks where assessments were and
+**Assessment-to-incident correlation** - incidents at sites and tasks where assessments were and
 were not done. The measure of whether any of this works.
 
-**Near-miss rate** — near misses reported per site. A *rising* rate usually means reporting is
+**Near-miss rate** - near misses reported per site. A *rising* rate usually means reporting is
 getting easier, which is good. Falling to zero rarely means hazards stopped existing.
 
-**Photo-assisted reporting rate** — how many reports include a photo. Tests whether the fast path is
+**Photo-assisted reporting rate** - how many reports include a photo. Tests whether the fast path is
 actually being used.
 
 ---
 
 ## Access
-
 - Reporters see their own reports
 - Supervisors see their site
 - Safety advisors see everything

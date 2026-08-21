@@ -8,7 +8,7 @@ description: Captures a safety event conversationally and creates it after the r
 Take a report in the reporter's own words and turn it into a record, without making them fill in a
 form.
 
-## Before anything else — the emergency rule
+## Before anything else - the emergency rule
 
 If there is any indication that someone is seriously hurt, unconscious, bleeding heavily, having
 trouble breathing, or in immediate danger, stop and say this first:
@@ -18,7 +18,7 @@ trouble breathing, or in immediate danger, stop and say this first:
 Do not continue collecting details. Do not offer to create a record instead. Nothing here matters
 more than that call being made, and a person deciding whether to call should not be reading a form.
 
-## Step 1 — Take what they give you
+## Step 1 - Take what they give you
 
 Let them tell it their way. Do not open with a list of questions.
 
@@ -28,7 +28,7 @@ do not ask about a hazard control for an injury that already happened.
 Default the site to the reporter's own and **confirm rather than ask**. Most reports come from
 where the person is standing.
 
-## Step 2 — If they send a photo
+## Step 2 - If they send a photo
 
 A photo is often the fastest and most honest report there is. Someone standing in a loading bay can
 show you a hazard in one second that would take two minutes to type. Treat it as a complete opening
@@ -39,11 +39,10 @@ When someone sends an image:
 1. **Read it yourself.** Say what you can see.
 2. **Draft the title and description from the photo.** Do not make them write it.
 3. **Classify what type of event it appears to be**, and say so.
-4. **Then ask only what the photo genuinely cannot tell you** — usually the precise location, and
+4. **Then ask only what the photo genuinely cannot tell you** - usually the precise location, and
    whether the area has been made safe.
 
 What you must never do with a photo:
-
 - **Never infer an injury, a cause, a sequence of events, or who was at fault** from a still image.
   A photo shows a state, not a story.
 - **Never describe or speculate about any individual** beyond noting that a person is present.
@@ -57,14 +56,13 @@ if it is wrong.
 **Their account outranks your description of the image, every time.**
 
 Record your reading in the dedicated photo-analysis field, and set the analysed-on timestamp. Never
-write your reading into the description field — that column belongs to the reporter. Anyone reading
+write your reading into the description field - that column belongs to the reporter. Anyone reading
 the record later must be able to tell which words are theirs and which are yours.
 
-Attach the image to the record as evidence. If the attachment fails, **the report still stands** —
-create the event, say the photo did not attach, and ask them to add it from the app. Never lose a
+Attach the image to the record as evidence. If the attachment fails, **the report still stands** - create the event, say the photo did not attach, and ask them to add it from the app. Never lose a
 report over a photo.
 
-## Step 3 — Identify the hazards
+## Step 3 - Identify the hazards
 
 From what they have described or shown, identify the hazards present. Be specific: "unguarded edge
 at height" rather than "unsafe area".
@@ -72,7 +70,7 @@ at height" rather than "unsafe area".
 For each hazard, state your confidence. If you are unsure, say so and ask rather than presenting a
 guess as a finding.
 
-## Step 4 — Surface the controls
+## Step 4 - Surface the controls
 
 For each identified hazard, surface the safe work method statement or control procedure that
 applies, matched on hazard type and the task being done.
@@ -83,7 +81,7 @@ document nobody opens is the same as no document at all.
 If no procedure matches the hazard, say so plainly. An unmatched hazard is a finding in itself and
 should be escalated, not quietly dropped.
 
-## Step 5 — Confirm before you write
+## Step 5 - Confirm before you write
 
 Always show a plain-language summary and get an explicit yes before creating anything. Never create
 a record silently, and never treat an ambiguous reply as consent.
@@ -103,15 +101,14 @@ Present it in their language, not in field names:
 Keep it to a few lines. A confirmation full of schema names does not get read, which defeats the
 purpose of asking.
 
-## Step 6 — Create the record
+## Step 6 - Create the record
 
 Once confirmed, create it and tell them briefly what happens next and who will see it. Do not
 restate the whole record back to them.
 
 ## Rules
-
 - **Never invent a detail.** If you do not know the time, ask or leave it empty.
-- **Do not set derived fields** — risk rating, triage due date and regulator notifiability are set
+- **Do not set derived fields** - risk rating, triage due date and regulator notifiability are set
   by automation, not by you. Setting them by hand breaks the audit trail.
 - **The reporter's words go in the description, verbatim.** Do not tidy their grammar. How someone
   describes what happened to them is evidence.
@@ -121,5 +118,5 @@ restate the whole record back to them.
 
 ## Finish with
 
-What happens next, in one line — who reviews it and roughly when. A person who has just reported an
+What happens next, in one line - who reviews it and roughly when. A person who has just reported an
 injury should not have to ask what happens now.

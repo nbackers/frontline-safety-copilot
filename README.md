@@ -14,15 +14,14 @@ The pattern is the same across every frontline organisation:
 
 **Job safety analysis is a form completed after the fact.** A worker with their hands full, standing
 in front of the job, has two minutes. A twelve-field form gets filled in at the end of the shift
-from memory — which makes it a compliance artefact, not a safety control.
+from memory - which makes it a compliance artefact, not a safety control.
 
 **The relevant procedure is in a document library nobody opens.** The safe work method statement for
 working at height exists. It is thorough, it is correct, and it is thirty pages into a SharePoint
 site that a worker on a loading dock will not open on a phone. The knowledge is present and the
 access is not.
 
-**Reporting is a burden, so it doesn't happen.** Near misses — the ones that predict the injury —
-go unreported, because reporting one costs more effort than the near miss cost.
+**Reporting is a burden, so it doesn't happen.** Near misses - the ones that predict the injury - go unreported, because reporting one costs more effort than the near miss cost.
 
 **Everything is retrospective.** Incident data accumulates, gets reported on monthly, and describes
 what already happened to someone.
@@ -49,7 +48,7 @@ what already happened to someone.
 | Included | Not included |
 |---|---|
 | Two agent behaviours as `SKILL.md` files | A packaged solution or deployed agent |
-| Vision and control-matching prompts (`prompts/hazardVision.js`) | Dataverse tables — schema is documented only |
+| Vision and control-matching prompts (`prompts/hazardVision.js`) | Dataverse tables - schema is documented only |
 | Dataverse schema documentation | A mobile app or PCF controls |
 | Safety-specific design principles | A procedure/SWMS library |
 
@@ -57,7 +56,7 @@ The behaviours and prompts are complete and usable. Everything else is documenta
 
 **Verification status:** the capture patterns and photo-handling rules are generalised from a
 production safety implementation. The **vision-based hazard identification and SWMS matching in this
-repo have not been run** — the prompts encode the right constraints, but no accuracy testing against
+repo have not been run** - the prompts encode the right constraints, but no accuracy testing against
 a hazard taxonomy or procedure library has been done here.
 
 > **This is safety tooling.** Validate against your own obligations, taxonomy and procedures before
@@ -116,7 +115,7 @@ guard" is not. A photo is one angle at one moment, and a confident all-clear is 
 output this system could produce.
 
 **It cannot state an area is safe.** It reports which hazards it identified and which controls
-apply. Only the person standing there can say it is safe — and that is where the responsibility
+apply. Only the person standing there can say it is safe - and that is where the responsibility
 belongs.
 
 **It cannot infer cause, sequence or fault.** An image shows a state, not a story.
@@ -129,7 +128,7 @@ all-clear.
 ### The reporter always outranks the model
 
 For incident reporting, the AI's reading of a photo goes in a **dedicated field**, never in the
-description. The description belongs to the reporter, in their words, verbatim — including their
+description. The description belongs to the reporter, in their words, verbatim - including their
 grammar, because how someone describes what happened to them is evidence.
 
 Anyone reading the record months later can tell exactly which words came from the person and which
@@ -144,7 +143,7 @@ over the other. It saw one frame; they were there.
 
 Before anything else, in every capture path:
 
-> If there is any indication someone is seriously hurt or in immediate danger — say to call
+> If there is any indication someone is seriously hurt or in immediate danger - say to call
 > emergency services, and stop.
 
 No detail collection. No offering to create a record instead. A person deciding whether to call
@@ -158,7 +157,7 @@ A behaviour worth stating explicitly, because it is counter-intuitive to build:
 
 **When nothing significant is found, say so and let them get on with it.**
 
-A safety tool that manufactures risk to appear diligent gets ignored within a fortnight — and an
+A safety tool that manufactures risk to appear diligent gets ignored within a fortnight - and an
 ignored safety tool is worse than none, because the organisation believes it has a control that
 nobody uses.
 
@@ -183,7 +182,7 @@ Equally: **never talk someone out of stopping.** If a worker is hesitant, suppor
 The capture patterns, photo-handling rules and agent behaviours are drawn from a production safety
 implementation, generalised.
 
-The vision-based hazard identification and SWMS matching are a **reference design** — the prompts
+The vision-based hazard identification and SWMS matching are a **reference design** - the prompts
 encode the right constraints, but accuracy against a specific hazard taxonomy and procedure library
 needs validating in your own environment before it is relied on.
 
@@ -194,7 +193,7 @@ inconvenience.
 
 ## Licence
 
-MIT — see [LICENSE](LICENSE).
+MIT - see [LICENSE](LICENSE).
 
 **No warranty.** This is a reference implementation, not a certified safety system. You are
 responsible for validating it against your own obligations, hazard taxonomy and procedures.

@@ -71,12 +71,11 @@ A worker in front of a job has around two minutes, one hand free, in poor light,
 gloves.
 
 Consequences for the design:
-
 - A photo counts as a complete opening report
 - The agent drafts the title and description; the worker corrects rather than composes
 - Site defaults to theirs and is confirmed, not asked
 - Only questions the photo cannot answer get asked
-- Only relevant fields — no first aid question on a hazard report
+- Only relevant fields - no first aid question on a hazard report
 
 **If the assessment takes longer than the job set-up, it will be skipped.** Then you have no data
 at all, which is worse than partial data.
@@ -91,7 +90,7 @@ is functionally identical to presenting nothing, because neither gets read.
 
 **If no procedure matches a hazard, say so and escalate.** An unmatched hazard is a finding in its
 own right. The failure mode to avoid is a hazard quietly disappearing because there was no paperwork
-for it — the gap is exactly what needs to be visible.
+for it - the gap is exactly what needs to be visible.
 
 ## 7. Branch on what was found
 
@@ -103,7 +102,7 @@ assessment teaches workers that the tool wastes their time.
 | Nothing significant | Confirm standard controls, proceed |
 | Standard hazards, controls exist | List controls, confirm in place, record |
 | High consequence | Require permit or isolation before starting |
-| No matching procedure | Escalate to a supervisor — this needs a person |
+| No matching procedure | Escalate to a supervisor - this needs a person |
 | Immediate danger | Stop, make safe first |
 
 The branching is what makes it an assessment rather than a form.
@@ -115,7 +114,7 @@ next hazard identification.
 
 A hazard that has already caused an incident at this site is not theoretical. Weight it accordingly.
 
-This is also the argument for recording assessments where nothing was found — they establish the
+This is also the argument for recording assessments where nothing was found - they establish the
 baseline that makes a change detectable.
 
 ## 9. Never lose a report
@@ -128,7 +127,7 @@ record matters more than its attachment.
 
 ## 10. Derived fields belong to automation
 
-Risk rating, triage due date, regulator notifiability — these are set by rules, not by the agent.
+Risk rating, triage due date, regulator notifiability - these are set by rules, not by the agent.
 
 Two reasons: consistency, since the same facts must always produce the same rating; and audit,
 because a regulator-notifiable determination must be traceable to a rule rather than to a model's
@@ -139,7 +138,6 @@ judgement on the day.
 ## What this does not do
 
 Stated plainly, because overclaiming in this domain is itself a hazard:
-
 - **It does not certify anything as safe.** It identifies hazards and surfaces controls.
 - **It does not replace a competent person.** High-consequence work needs one.
 - **It does not detect every hazard.** It reports what it identified, with confidence, and states
