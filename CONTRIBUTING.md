@@ -1,34 +1,44 @@
 # Contributing
 
-The routing patterns here are drawn from repeated practice rather than published documentation. If
-your experience contradicts them, that is the most valuable thing you can contribute.
+This is sample code, and it touches workplace safety. Contributions are welcome, with one standing
+caveat: **nothing here should make the tool more confident than the evidence supports.**
+
+## The constraint that matters most
+
+A model reading a photo may **never**:
+
+- conclude a hazard is absent, or that an area is safe
+- infer cause, sequence or fault from a still image
+- assess a person's competence, behaviour or condition
+
+"No guard is visible in this image" is acceptable. "There is no guard" is not. A confident all-clear
+from one camera angle is the most dangerous output this system could produce.
+
+Any pull request that weakens those constraints will be declined.
 
 ## Especially useful
 
-- **Routing counter-examples.** A case where `description` was *not* what determined routing, or
-  where tuning it didn't help. Include the descriptions verbatim and the question that misrouted.
-- **Regional or version differences.** Whether routing behaves the same across Copilot Studio
-  regions and releases is untested.
-- **Overlap behaviour with three or more descriptions.** Documented for two; unverified beyond that.
-- **Additional upload failure modes.** If a skill zip is rejected for a reason the validator doesn't
-  catch, tell us the symptom and the cause.
-- **Corrections.** If something here is wrong, say so plainly. A confidently stated wrong pattern is
-  worse than no pattern.
+- **Accuracy results** against a real hazard taxonomy or procedure library. None of the vision
+  behaviour in this repo has been measured.
+- **Additional hazard categories** and the prompt wording that identifies them reliably.
+- **Failure cases.** A photo the prompts read wrongly is more useful than one they read correctly.
+- **Regulatory perspective.** If the framing conflicts with a jurisdiction's obligations, say so.
+- **Corrections.** If something here is wrong, say so plainly.
 
 ## Pull requests
 
 1. One concern per PR.
-2. Skills must pass `.\scripts\Build-SkillPackage.ps1 -ValidateOnly`.
-3. Write files as **UTF-8 without BOM**.
-4. Keep the verified / drawn-from-practice / unverified distinction in the README accurate. If you
-   add a claim, say which category it belongs to.
-5. No customer names, tenant identifiers, environment URLs or real schema. Run the pre-publish scan.
+2. Preserve the safety constraints above, and the separation between the model's reading of a photo
+   and the reporter's own account.
+3. Do not remove the emergency rule from any capture path.
+4. Never commit real incident data, photographs, site names or personal information. Use synthetic
+   examples.
+5. If you add a claim about accuracy, say how it was measured.
 
-## On stating certainty
+## A note on scope
 
-This repo deliberately separates what is mechanically verified from what is behavioural observation.
-Please preserve that. An unverified claim presented as fact is worse than no claim, because the next
-person builds on it and loses a day when it doesn't hold.
+This repo does not certify anything as safe, replace a competent person, or detect every hazard.
+Contributions should keep it that way, and keep saying so.
 
 ## Code of conduct
 

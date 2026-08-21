@@ -7,6 +7,7 @@
 [![Multimodal](https://img.shields.io/badge/multimodal-vision_prompts-0F6CBD?style=flat-square)](prompts/)
 [![Copilot Studio](https://img.shields.io/badge/Copilot_Studio-0F6CBD?style=flat-square&logo=microsoft&logoColor=white)](agent/)
 [![Safety critical](https://img.shields.io/badge/safety_critical-validate_before_use-critical?style=flat-square)](docs/design-principles.md)
+[![Sample code](https://img.shields.io/badge/sample_code-not_production_ready-orange?style=flat-square)](#disclaimer)
 [![Licence](https://img.shields.io/badge/licence-MIT-blue?style=flat-square)](LICENSE)
 
 </div>
@@ -64,10 +65,9 @@ what already happened to someone.
 
 The behaviours and prompts are complete and usable. Everything else is documentation.
 
-**Verification status:** the capture patterns and photo-handling rules are generalised from a
-production safety implementation. The **vision-based hazard identification and SWMS matching in this
-repo have not been run** - the prompts encode the right constraints, but no accuracy testing against
-a hazard taxonomy or procedure library has been done here.
+**Verification status:** the vision-based hazard identification and SWMS matching in this repo have
+**not been run**. The prompts encode the right constraints, but no accuracy testing against a hazard
+taxonomy or procedure library has been done here.
 
 > **This is safety tooling.** Validate against your own obligations, taxonomy and procedures before
 > relying on any of it. The failure mode of a wrong answer is not an inconvenience.
@@ -189,15 +189,29 @@ Equally: **never talk someone out of stopping.** If a worker is hesitant, suppor
 
 ## Status
 
-The capture patterns, photo-handling rules and agent behaviours are drawn from a production safety
-implementation, generalised.
-
-The vision-based hazard identification and SWMS matching are a **reference design** - the prompts
-encode the right constraints, but accuracy against a specific hazard taxonomy and procedure library
-needs validating in your own environment before it is relied on.
+This is a **reference design**. The agent behaviours, photo-handling rules and prompts encode the
+constraints that matter, but accuracy against a specific hazard taxonomy and procedure library needs
+validating in your own environment before it is relied on.
 
 **Validate before deploying.** This is safety tooling. The failure mode of a wrong answer is not an
 inconvenience.
+
+---
+
+## Disclaimer
+
+This is **sample code**, published as a reusable reference pattern.
+
+- Provided **as is**, without warranty of any kind, express or implied. See [LICENSE](LICENSE).
+- **Not production ready.** Treat it as a starting point, not a finished solution. Review, test and
+  harden it against your own requirements before any real use.
+- **Not an official Microsoft product** and not affiliated with, endorsed by, or supported by
+  Microsoft. Product names are trademarks of their respective owners.
+- **No support commitment.** Issues and pull requests are welcome, but nothing here carries an SLA.
+- Some behaviours documented here rely on **undocumented or preview platform features** that can
+  change without notice. Verify against current documentation before depending on them.
+- You are responsible for security, privacy, licensing and regulatory compliance in your own
+  environment.
 
 ---
 
