@@ -1,8 +1,18 @@
+<div align="center">
+
 # Frontline Safety Copilot
 
-Proactive field safety for frontline workers: guided capture, **hazard identification from a
-photo**, automatic surfacing of the safe work method statement that applies, and a workflow that
-branches on what was actually found.
+**Proactive field safety, hazard identification from a photo**
+
+[![Multimodal](https://img.shields.io/badge/multimodal-vision_prompts-0F6CBD?style=flat-square)](prompts/)
+[![Copilot Studio](https://img.shields.io/badge/Copilot_Studio-0F6CBD?style=flat-square&logo=microsoft&logoColor=white)](agent/)
+[![Safety critical](https://img.shields.io/badge/safety_critical-validate_before_use-critical?style=flat-square)](docs/design-principles.md)
+[![Licence](https://img.shields.io/badge/licence-MIT-blue?style=flat-square)](LICENSE)
+
+</div>
+
+Guided capture, automatic surfacing of the safe work method statement that applies, and a workflow
+that branches on what was actually found.
 
 ---
 
@@ -66,34 +76,34 @@ a hazard taxonomy or procedure library has been done here.
 
 ## How it works
 
-```
-   Worker about to start a job
-              │
-              ▼
-   Describes the task, or photographs the area
-              │
-              ▼
-   Hazard identification          ← vision prompt, or description
-              │
-              ▼
-   Match to procedures            ← by hazard type + task
-              │
-              ▼
-   ┌──────────┴───────────────────────────┐
-   │  Workflow branches on what was found │
-   └──────────┬───────────────────────────┘
-              │
-    ┌─────────┼──────────┬─────────────┬──────────────┐
-    ▼         ▼          ▼             ▼              ▼
- Nothing   Standard   High         No matching    Immediate
- found     controls   consequence  procedure      danger
-    │         │          │             │              │
- Proceed   Confirm    Permit /      Escalate      Stop, make
-           controls   isolation     to human      safe first
-                      required
-              │
-              ▼
-   Assessment recorded → becomes site history for next time
+```mermaid
+flowchart TD
+    A["Worker about to start a job"] --> B["Describes the task,<br/>or photographs the area"]
+    B --> C["<b>Hazard identification</b><br/><small>vision prompt, or description</small>"]
+    C --> D["<b>Match to procedures</b><br/><small>by hazard type + task</small>"]
+    D --> E{"Workflow branches on<br/>what was found"}
+
+    E -->|Nothing found| F["Proceed with<br/>standard controls"]
+    E -->|Standard hazards| G["Confirm controls<br/>in place"]
+    E -->|High consequence| H["Permit or isolation<br/>required first"]
+    E -->|No matching procedure| I["Escalate to a human"]
+    E -->|Immediate danger| J["Stop, make safe first"]
+
+    F --> K[("Assessment recorded<br/><small>becomes site history</small>")]
+    G --> K
+    H --> K
+    I --> K
+    J --> K
+
+    K -.->|informs next time| C
+
+    style C fill:#0F6CBD,stroke:#0A4E8A,color:#fff
+    style D fill:#0F6CBD,stroke:#0A4E8A,color:#fff
+    style E fill:#742774,stroke:#4A184A,color:#fff
+    style H fill:#D93F0B,stroke:#9E2E08,color:#fff
+    style I fill:#D93F0B,stroke:#9E2E08,color:#fff
+    style J fill:#A4262C,stroke:#6E1A1E,color:#fff
+    style K fill:#0078D4,stroke:#005A9E,color:#fff
 ```
 
 That last arrow matters. Today's assessment is what makes tomorrow's hazard identification better,
